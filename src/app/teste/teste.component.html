@@ -1,0 +1,9 @@
+<div *ngFor="let livro of livros">
+  <div>
+    <img src="{{ livro.book_image }}" />
+    <p>{{ livro.title }}</p>
+  </div>
+</div>
+
+<button *ngIf="count != 11" (click)="nextPage()" >NextPage</button>
+<button *ngIf="count > 0" (click)="lastPage()">LastPage</button>
