@@ -1,3 +1,16 @@
 .example-spacer {
   flex: 1 1 auto;
 }
+
+.logo{
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.logo img{
+  width: 100px;
+  height: 100px;
+}

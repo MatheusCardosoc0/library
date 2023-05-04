@@ -1,9 +1,13 @@
-<div *ngFor="let livro of livros">
-  <div>
-    <img src="{{ livro.book_image }}" />
-    <p>{{ livro.title }}</p>
+<div class="container">
+  <div class="container-books">
+    <div *ngFor="let livro of livros" class="card-book">
+      <img src="{{ livro.book_image }}" />
+      <p>{{ livro.title }}</p>
+    </div>
+  </div>
+
+  <div class="container-buttons">
+    <button *ngIf="count != 11" (click)="nextPage()" class="next">NextPage</button>
+    <button *ngIf="count > 0" (click)="lastPage()" class="last">LastPage</button>
   </div>
 </div>
-
-<button *ngIf="count != 11" (click)="nextPage()" >NextPage</button>
-<button *ngIf="count > 0" (click)="lastPage()">LastPage</button>
